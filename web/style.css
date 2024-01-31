@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=K2D:wght@800&display=swap');
+
+.card {
+    width: 330px;
+    max-width: 330px;
+    min-height: 402px;
+    max-height: 402px;
+    opacity: 0.9;
+    transform: scale(0.7);
+    font-family: "k2d";
+    box-shadow: rgb(27 27 27) 5px 5px 8px, rgb(39 39 39) -5px -5px 8px;
+    padding: 20px;
+    border-radius: 5px;
+    background: rgba(33, 33, 33, 0.8);
+    animation: 1s ease 0s 1 normal forwards running expandText;
+
+    top: 22vw;
+    left: -1.5vw;
+    position: relative;
+}
+
+
+.card-image img {
+    min-width: 65%;
+    max-width: 100%;
+    min-height: auto;
+    max-height: 11vw;
+    border-radius: 15px;
+    opacity: 0;
+    animation: aparecertexto 1s 1s forwards;
+}
+
+
+.card-title {
+    font-size: 18px;
+    font-weight: 600;
+    opacity: 0;
+    position: relative; /* Agregar posición relativa */
+    animation: aparecertexto 1s 1s forwards;
+    color: #b2eccf;
+    filter: drop-shadow(2px 4px 6px black);
+    text-transform: uppercase;
+    margin: 15px 0 0 10px;
+}
+
+.card-image {
+
+    border-radius: 15px;
+    min-height: 11vw;
+    max-height: 11vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-body {
+    margin: 13px 0 0 10px;
+    opacity: 0;
+
+    animation: aparecertexto 1s 1.5s forwards;
+
+    color: rgb(184, 184, 184);
+    font-size: 18px;
+}
+
+.footer {
+    position: fixed;
+    bottom: -5px;
+    right: 10px;
+    font-size: 14px;
+    color: white;
+    padding: 10px;
+    font-size: .8vw;
+    border-radius: 5px;
+    background: rgba(33, 33, 33, 0.7);
+}
+
+.by-name {
+    font-weight: 700;
+}
+
+.fa-duotone {
+    margin-right: .5vw;
+
+}
+
+@keyframes expandText {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(0.7);
+    }
+}
+
+@keyframes aparecertexto {
+    0% {
+        opacity: 0;
+        left: -15px; /* Cambiar de -15vw a -15px */
+    }
+    100% {
+        opacity: 1;
+        left: 0; /* Cambiar de 0vw a 0 */
+    }
+}
